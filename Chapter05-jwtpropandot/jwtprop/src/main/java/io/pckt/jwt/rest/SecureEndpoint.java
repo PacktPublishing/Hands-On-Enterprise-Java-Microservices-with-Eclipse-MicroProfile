@@ -28,7 +28,7 @@ public class SecureEndpoint {
         return "Hello[open] " + user;
     }
     @GET
-    @Path("/openHello")
+    @Path("/secureHello")
     @Produces(MediaType.TEXT_PLAIN)
     @RolesAllowed("User")
     public String secureHello() {
