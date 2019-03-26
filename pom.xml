@@ -49,9 +49,13 @@
                 <plugin>
                     <groupId>io.thorntail</groupId>
                     <artifactId>thorntail-maven-plugin</artifactId>
+                    <version>${thorntail.version}</version>
                     <executions>
                         <execution>
                             <id>package</id>
+                            <goals>
+                              <goal>package</goal>
+                            </goals>
                         </execution>
                         <execution>
                             <id>start</id>
