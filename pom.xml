@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.microprofile</groupId>
+    <artifactId>handson-microprofile</artifactId>
+    <name>Hands-On-Enterprise-Java-Microservices-with-Eclipse-MicroProfile - Parent pom</name>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/PacktPublishing/Hands-On-Enterprise-Java-Microservices-with-Eclipse-MicroProfile</url>
+        <connection>scm:git@github.com:PacktPublishing/Hands-On-Enterprise-Java-Microservices-with-Eclipse-MicroProfile.git</connection>
+        <developerConnection>scm:git@github.com:PacktPublishing/Hands-On-Enterprise-Java-Microservices-with-Eclipse-MicroProfile.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <thorntail.version>2.4.0.Final</thorntail.version>
+        <junit.version>5.4.1</junit.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>io.thorntail</groupId>
+                    <artifactId>thorntail-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>package</id>
+                        </execution>
+                        <execution>
+                            <id>start</id>
+                        </execution>
+                        <execution>
+                            <id>stop</id>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.thorntail</groupId>
+                <artifactId>microprofile</artifactId>
+                <version>${thorntail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <!-- Book chapters with code -->
+        <module>Chapter05-jwtpropandot/jwtprop</module>
+    </modules>
+
+</project>
