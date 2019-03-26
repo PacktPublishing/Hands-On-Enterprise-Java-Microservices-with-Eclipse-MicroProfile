@@ -73,8 +73,10 @@
         <dependencies>
             <dependency>
                 <groupId>io.thorntail</groupId>
-                <artifactId>microprofile</artifactId>
+                <artifactId>bom-all</artifactId>
                 <version>${thorntail.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
