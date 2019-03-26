@@ -15,6 +15,18 @@
     <packaging>war</packaging>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+          <plugin>
+            <groupId>io.thorntail</groupId>
+            <artifactId>thorntail-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>package</id>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
         <resources>
             <resource>
                 <directory>src/test/resources</directory>
