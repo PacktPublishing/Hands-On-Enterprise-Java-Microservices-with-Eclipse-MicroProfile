@@ -1,5 +1,6 @@
 package io.pckt.jwt.rest;
 
+import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -13,6 +14,7 @@ import javax.ws.rs.core.SecurityContext;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 
 @Path("/jwt")
+@DenyAll
 public class SecureEndpoint {
     @Inject
     JsonWebToken jwt;
@@ -28,7 +30,7 @@ public class SecureEndpoint {
         return "Hello[open] " + user;
     }
     @GET
-    @Path("/openHello")
+    @Path("/secureHello")
     @Produces(MediaType.TEXT_PLAIN)
     @RolesAllowed("User")
     public String secureHello() {

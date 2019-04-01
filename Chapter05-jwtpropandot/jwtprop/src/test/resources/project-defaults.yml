@@ -17,6 +17,10 @@ thorntail:
           path: target/jwt.log
         suffix: .yyyy-MM-dd
         named-formatter: LOG_FORMATTER
+        level: DEBUG
+    console-handlers:
+      CONSOLE:
+        level: INFO
     root-logger:
       handlers:
         - CONSOLE
