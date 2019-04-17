@@ -95,6 +95,7 @@
 
     <modules>
         <!-- Book chapters with code -->
+        <module>Chapter04-metricsandhc/hc</module>
         <module>Chapter05-jwtpropandot/jwtprop</module>
     </modules>
 

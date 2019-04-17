@@ -10,7 +10,7 @@ thorntail:
   logging:
     pattern-formatters:
       LOG_FORMATTER:
-        pattern: "%p [%c] %s%e%n"
+        pattern: "%d{HH:mm:ss,SSS} %p [%c] %s%e%n"
     periodic-rotating-file-handlers:
       FILE:
         file:
@@ -22,6 +22,7 @@ thorntail:
       CONSOLE:
         level: INFO
     root-logger:
+      level: DEBUG
       handlers:
         - CONSOLE
         - FILE
