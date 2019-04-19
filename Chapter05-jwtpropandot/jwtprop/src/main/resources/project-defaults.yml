@@ -4,8 +4,9 @@ thorntail:
       realm: Packt
       roles:
         file: roles.properties
+    jwt:
       token:
-        signer-pub-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqOAjDHZU7FisNb9srcITQOpptmT06fbgHh9KiESS/FZJNsIyPs2Hok9qY9++N6boilCBxKnBsznprwcvQzMETkeGK/9EiRyWEyq4n8NRM4hoPsV42UYFV+8zWokwIjwVXtF5ZBM8IVxo70IloVnjIDoxA4ESGVG0WfgeRFEXAknMBnvcTzGuQdGwGdp/eKa32XMYyT+/X+urOHA8wHU8RNjcEVJht1H083wu26rsLdDLJeA3R1wd9OKzUrdTaKFWcJ1/l2F+ekNkZyi5E9M0JE6V1ujCr2KNNkH9OhopmqNCEddDAzksnF/cEn1jkgdjA/kFzWz3GiQgNQr4CGEczQIDAQAB
+        signer-pub-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlivFI8qB4D0y2jy0CfEqFyy46R0o7S8TKpsx5xbHKoU1VWg6QkQm+ntyIv1p4kE1sPEQO73+HY8+Bzs75XwRTYL1BmR1w8J5hmjVWjc6R2BTBGAYRPFRhor3kpM6ni2SPmNNhurEAHw7TaqszP5eUF/F9+KEBWkwVta+PZ37bwqSE4sCb1soZFrVz/UT/LF4tYpuVYt3YbqToZ3pZOZ9AX2o1GCG3xwOjkc4x0W7ezbQZdC9iftPxVHR8irOijJRRjcPDtA6vPKpzLl6CyYnsIYPd99ltwxTHjr3npfv/3Lw50bAkbT4HeLFxTx4flEoZLKO/g0bAoV2uqBhkA9xnQIDAQAB
         issued-by: "http://io.packt.jwt"
   logging:
     pattern-formatters:

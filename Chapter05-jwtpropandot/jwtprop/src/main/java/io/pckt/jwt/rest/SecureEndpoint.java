@@ -11,13 +11,21 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 
+import org.eclipse.microprofile.jwt.Claim;
+import org.eclipse.microprofile.jwt.Claims;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 
 @Path("/jwt")
 @DenyAll
 public class SecureEndpoint {
     @Inject
-    JsonWebToken jwt;
+    private JsonWebToken jwt;
+    @Inject
+    @Claim(standard = Claims.raw_token)
+    private String jwtString;
+    @Inject
+    @Claim(standard = Claims.upn)
+    private String upn;
     @Context
     private SecurityContext context;
 
@@ -27,7 +35,8 @@ public class SecureEndpoint {
     @PermitAll
     public String openHello() {
         String user = jwt == null ? "anonymous" : jwt.getName();
-        return "Hello[open] " + user;
+        String upnClaim = upn == null ? "no-upn" : upn;
+        return String.format("Hello[open] user=%s, upn=%s", user, upnClaim);
     }
     @GET
     @Path("/secureHello")
@@ -35,6 +44,8 @@ public class SecureEndpoint {
     @RolesAllowed("User")
     public String secureHello() {
         String user = jwt == null ? "anonymous" : jwt.getName();
-        return "Hello[secure] " + user;
+        String scheme = context.getAuthenticationScheme();
+        boolean isUserRole = context.isUserInRole("User");
+        return String.format("Hello[secure] user=%s, upn=%s, scheme=%s, isUserRole=%s", user, upn, scheme, isUserRole);
     }
 }

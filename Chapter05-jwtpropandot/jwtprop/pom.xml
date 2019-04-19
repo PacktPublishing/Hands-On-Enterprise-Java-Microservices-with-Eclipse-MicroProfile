@@ -29,7 +29,7 @@
         </plugins>
         <resources>
             <resource>
-                <directory>src/test/resources</directory>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
@@ -43,6 +43,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+      <dependency>
+        <groupId>com.nimbusds</groupId>
+        <artifactId>nimbus-jose-jwt</artifactId>
+        <version>6.7</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
 </project>
 
