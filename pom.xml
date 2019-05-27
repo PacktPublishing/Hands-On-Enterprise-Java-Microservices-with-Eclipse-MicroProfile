@@ -95,8 +95,9 @@
 
     <modules>
         <!-- Book chapters with code -->
-        <module>Chapter04-metricsandhc/hc</module>
-        <module>Chapter05-jwtpropandot/jwtprop</module>
+        <module>Chapter04-healthcheck</module>
+        <module>Chapter04-jwtpropagation</module>
+        <module>Chapter06-restclient</module>
     </modules>
 
 </project>
