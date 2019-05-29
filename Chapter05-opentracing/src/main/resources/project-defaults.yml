@@ -1,0 +1,6 @@
+thorntail:
+  jaeger:
+    service-name: 'opentracing-example'
+    sampler-type: 'const'
+    sampler-parameter: 1
+    remote-reporter-http-endpoint: 'http://localhost:14268/api/traces'

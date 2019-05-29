@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.microprofile</groupId>
+        <artifactId>handson-microprofile</artifactId>
+        <relativePath>../pom.xml</relativePath>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>io.microprofile.opentracing</groupId>
+    <artifactId>opentracing</artifactId>
+    <name>OpenTracing</name>
+    <packaging>war</packaging>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+          <plugin>
+            <groupId>io.thorntail</groupId>
+            <artifactId>thorntail-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>package</id>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+        <resources>
+            <resource>
+              <directory>src/main/resources</directory>
+              <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+    <dependencies>
+      <dependency>
+        <groupId>io.thorntail</groupId>
+        <artifactId>jaeger</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>io.thorntail</groupId>
+        <artifactId>microprofile</artifactId>
+        </dependency>
+      <dependency>
+        <groupId>io.thorntail</groupId>
+        <artifactId>microprofile-opentracing</artifactId>
+         <!-- TODO using snapshot because 1.4.0.Final has a bug and does not trace MP Rest Client -->
+        <version>2.4.1.Final-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+
+    <repositories>
+      <repository>
+        <id>snapshots-repo</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        <releases><enabled>false</enabled></releases>
+        <snapshots><enabled>true</enabled></snapshots>
+      </repository>
+    </repositories>
+</project>
+
