@@ -98,6 +98,9 @@
         <module>Chapter04-healthcheck</module>
         <module>Chapter04-jwtpropagation</module>
         <module>Chapter06-restclient</module>
+        <module>Chapter08-mpcodesample/svcs1</module>
+        <module>Chapter08-mpcodesample/svcs2</module>
+        <module>Chapter08-mpcodesample/web</module>
     </modules>
 
 </project>
