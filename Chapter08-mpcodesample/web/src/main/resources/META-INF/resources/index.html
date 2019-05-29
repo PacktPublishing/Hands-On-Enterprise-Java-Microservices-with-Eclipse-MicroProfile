@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/grid.css">
+  <title>Eclipse MicroProfile Demo</title>
+
+  <script>
+
+  </script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="jumbotron">
+    <img src="images/jdukeQ.jpg" width="256" class="rounded float-right">
+    <h1 class="display-4" align="center">Quarkusd MicroProfile Sample</h1>
+    <p class="lead">A demo illustrating the MicroProfile 2.2 features in the Quarkus runtime.</p>
+    <hr class="my-4" color="white">
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-config-tab" data-toggle="pill" href="#v-pills-config" role="tab"
+           aria-controls="v-pills-config" aria-selected="false">Config</a>
+        <a class="nav-link" id="v-pills-health-tab" data-toggle="pill" href="#v-pills-health" role="tab"
+           aria-controls="v-pills-health" aria-selected="false">Health</a>
+        <a class="nav-link" id="v-pills-metrics-tab" data-toggle="pill" href="#v-pills-metrics" role="tab"
+           aria-controls="v-pills-metrics" aria-selected="false">Metrics</a>
+        <a class="nav-link" id="v-pills-opentracing-tab" data-toggle="pill" href="#v-pills-opentracing" role="tab"
+           aria-controls="v-pills-opentracing" aria-selected="false">OpenTracing</a>
+        <a class="nav-link" id="v-pills-openapi-tab" data-toggle="pill" href="#v-pills-openapi" role="tab"
+           aria-controls="v-pills-openapi" aria-selected="false">OpenAPI</a>
+        <a class="nav-link" id="v-pills-restclient-tab" data-toggle="pill" href="#v-pills-restclient" role="tab"
+           aria-controls="v-pills-restclient" aria-selected="false">RestClient</a>
+        <a class="nav-link" id="v-pills-fault-tab" data-toggle="pill" href="#v-pills-fault" role="tab"
+           aria-controls="v-pills-fault" aria-selected="false">FaultTolerance</a>
+        <a class="nav-link" id="v-pills-jwt-tab" data-toggle="pill" href="#v-pills-jwt" role="tab"
+           aria-controls="v-pills-jwt" aria-selected="false">JWT</a>
+        <a class="nav-link" id="v-pills-keycloak-tab" data-toggle="pill" href="#v-pills-keycloak" role="tab"
+           aria-controls="v-pills-keycloak" aria-selected="false">KeyCloak</a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade" id="v-pills-config" role="tabpanel" aria-labelledby="v-pills-config-tab">
+          <h2>Config injected.value test</h2>
+          <a href="http://localhost:8081/demo1/config/injected" target="replyContent">curl http://localhost:8080/demo1/config/injected</a>
+          <h2>Injected Pi value</h2>
+          <a href="http://localhost:8081/demo1/config/injectedPi" target="replyContent">demo1/config/injectedPi</a><br/>
+          <h2>Config values by lookup</h2>
+          <a href="http://localhost:8081/demo1/config/lookup" target="replyContent">demo1/config/lookup</a> <br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-health" role="tabpanel" aria-labelledby="v-pills-health-tab">
+          <h2>Demo1 Health Status</h2>
+          <a href="health" onclick="javascript:event.target.port=8081" target="replyContent">Demo1 health status</a> <br/>
+          <h2>Demo2 Health Status</h2>
+          <a href="health" onclick="javascript:event.target.port=8082" target="replyContent">Demo2 health status</a> <br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-metrics" role="tabpanel" aria-labelledby="v-pills-metrics-tab">
+          <h2>Timed Endpoint</h2>
+          <a href="demo1/metric/timed" onclick="javascript:event.target.port=8081" target="replyContent">Timed endpoint</a> <br/>
+          <h2>Metrics Page</h2>
+          <a href="metrics" onclick="javascript:event.target.port=8081" target="replyContent">Metrics page</a> <br/>
+          <h2>Timed-request Metric</h2>
+          <a href="metrics/application/io.packt.sample.metric.MetricController.timed-request"
+             onclick="javascript:event.target.port=8081" target="replyContent">MetricController.timed-request</a>
+          <br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-opentracing" role="tabpanel" aria-labelledby="v-pills-opentracing-tab">
+          <h2>Random Delay</h2>
+          <a href="demo1/traced/randomDelay" onclick="javascript:event.target.port=8081" target="replyContent">demo1/traced/randomDelay</a><br/>
+          <h2>Jaegar UI</h2>
+          <!-- -->
+          <a href="#" target="_blank" onclick="javascript:event.target.port=16686">http://localhost:16686/</a>
+        </div>
+        <div class="tab-pane fade" id="v-pills-openapi" role="tabpanel" aria-labelledby="v-pills-openapi-tab">
+          <h2>Open API Document</h2>
+          <a href="openapi" onclick="javascript:event.target.port=8081" target="replyContent">/openapi</a><br/>
+          <h2>Swagger UI</h2>
+          <a href="swagger-ui" onclick="javascript:event.target.port=8081" target="_blank">/swagger-ui</a> <br/>
+
+        </div>
+        <div class="tab-pane fade" id="v-pills-restclient" role="tabpanel" aria-labelledby="v-pills-restclient-tab">
+          <h2>RestClient access WorldClockApi</h2>
+          <a href="demo1/time/now" onclick="javascript:event.target.port=8081" target="replyContent">demo1/time/now</a> <br/>
+          <h2>RestClient WorldClockApi Service on Demo2</h2>
+          <button onclick="secureRequest('8082', 'demo2/time/userNow')" class="btn btn-primary">demo2/time/userNow</button> Using Authentication: Bearer MP-JWT token...<br/>
+          <h2>RestClient proxy to WorldClockApi Service on Demo2</h2>
+          <button onclick="secureRequest('8081', 'demo1/time/proxyUserTZ')" class="btn btn-primary">demo1/time/proxyUserTZ</button> Using Authentication: Bearer MP-JWT token...<br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-fault" role="tabpanel" aria-labelledby="v-pills-fault-tab">
+          <a href="demo1/resilience" onclick="javascript:event.target.port=8081" target="replyContent">Fallback after timeout</a> <br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-jwt" role="tabpanel" aria-labelledby="v-pills-jwt-tab">
+          <h2>Access Endpoint Without JWT</h2>
+          <a href="demo1/jwt/openHello" onclick="javascript:event.target.port=8081" target="replyContent">demo1/jwt/openHello</a> <br/>
+          <h2>Access Endpoint With JWT</h2>
+          <button onclick="secureRequest('8081', 'demo1/jwt/secureHello')" class="btn btn-primary">demo1/jwt/secureHello</button> Using Authentication: Bearer MP-JWT token...<br/>
+        </div>
+        <div class="tab-pane fade" id="v-pills-keycloak" role="tabpanel" aria-labelledby="v-pills-keycloak-tab">
+
+          <div class="row">
+            <div class="col-12">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-success">
+                  <input type="radio" name="options" id="login" autocomplete="off" onclick="console.log('Login')"
+                         onchange="loginChange(this)"> Login
+                </label>
+                <label class="btn btn-danger active">
+                  <input type="radio" name="options" id="logout" autocomplete="off" checked onclick="console.log('Logout')"
+                         onchange="loginChange(this)"> Logout
+                </label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <div><input id="refresh" type="checkbox" checked> Refresh ? <span id="time"></span> before token refresh</div>
+              <div id="output"></div>
+
+              <div class="accordion" id="accordion" aria-multiselectable="true">
+
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Token and Info
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="wrapper">
+                        <!--
+                        <div class="one"> Refresh Token
+                          <pre id="refreshToken" class="prettyprint"></pre>
+                        </div>
+                        <div class="two">IDToken
+                          <pre id="idToken" class="prettyprint"></pre>
+                        </div>
+                        -->
+                        <div class="one">Access Token
+                          <pre id="token" class="prettyprint .pre-scrollable"></pre>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Access Token Base64
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="panel-body">
+                        <div id="token64" style="word-break: break-all;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <iframe src="reply-frame.html" name="replyContent" id="replyContentX" width="100%" class="rounded-lg mw-100">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://localhost:8180/auth/js/keycloak.js"></script>
+<script src="http://localhost:8180/auth/js/keycloak-authz.js"></script>
+
+<script src="script/app.js"></script>
+</body>
+</html>
