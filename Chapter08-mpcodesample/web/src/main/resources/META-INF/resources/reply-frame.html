@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<div id="results"></div>
+
+<script>
+    window.addEventListener('message', function(event) {
+      console.log("Received %o, type=%s from %s", event.data, typeof event.data, event.origin);
+      if (typeof event.data === "string") {
+        results.innerHTML = event.data;
+      } else {
+        console.log("ignored content");
+      }
+    });
+  </script>
+
+</body>
+</html>
