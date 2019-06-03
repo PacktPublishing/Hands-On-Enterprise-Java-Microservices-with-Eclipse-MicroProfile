@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style/grid.css">
-  <title>Eclipse MicroProfile Demo</title>
+  <title>Eclipse MicroProfile Sample</title>
 
   <script>
 
@@ -59,20 +59,20 @@
           <a href="http://localhost:8081/demo1/config/lookup" target="replyContent">demo1/config/lookup</a> <br/>
         </div>
         <div class="tab-pane fade" id="v-pills-health" role="tabpanel" aria-labelledby="v-pills-health-tab">
-          <h2>Demo1 Health Status</h2>
-          <a href="health" onclick="javascript:event.target.port=8081" target="replyContent">Demo1 health status</a> <br/>
-          <h2>Demo2 Health Status</h2>
-          <a href="health" onclick="javascript:event.target.port=8082" target="replyContent">Demo2 health status</a> <br/>
+          <h2>Svcs1 Health Status</h2>
+          <a href="health" onclick="javascript:event.target.port=8081" target="replyContent">Svcs1 health status</a> <br/>
+          <h2>Svcs2 Health Status</h2>
+          <a href="health" onclick="javascript:event.target.port=8082" target="replyContent">Svcs2 health status</a> <br/>
         </div>
         <div class="tab-pane fade" id="v-pills-metrics" role="tabpanel" aria-labelledby="v-pills-metrics-tab">
           <h2>Timed Endpoint</h2>
           <a href="demo1/metric/timed" onclick="javascript:event.target.port=8081" target="replyContent">Timed endpoint</a> <br/>
-          <h2>Metrics Page</h2>
-          <a href="metrics" onclick="javascript:event.target.port=8081" target="replyContent">Metrics page</a> <br/>
           <h2>Timed-request Metric</h2>
           <a href="metrics/application/io.packt.sample.metric.MetricController.timed-request"
              onclick="javascript:event.target.port=8081" target="replyContent">MetricController.timed-request</a>
           <br/>
+          <h2>Metrics Page</h2>
+          <a href="metrics" onclick="javascript:event.target.port=8081" target="replyContent">Metrics page</a> <br/>
         </div>
         <div class="tab-pane fade" id="v-pills-opentracing" role="tabpanel" aria-labelledby="v-pills-opentracing-tab">
           <h2>Random Delay</h2>
@@ -91,9 +91,9 @@
         <div class="tab-pane fade" id="v-pills-restclient" role="tabpanel" aria-labelledby="v-pills-restclient-tab">
           <h2>RestClient access WorldClockApi</h2>
           <a href="demo1/time/now" onclick="javascript:event.target.port=8081" target="replyContent">demo1/time/now</a> <br/>
-          <h2>RestClient WorldClockApi Service on Demo2</h2>
+          <h2>Secured RestClient WorldClockApi Service on Svcs2</h2>
           <button onclick="secureRequest('8082', 'demo2/time/userNow')" class="btn btn-primary">demo2/time/userNow</button> Using Authentication: Bearer MP-JWT token...<br/>
-          <h2>RestClient proxy to WorldClockApi Service on Demo2</h2>
+          <h2>Secured RestClient proxy to WorldClockApi Service on Svcs1</h2>
           <button onclick="secureRequest('8081', 'demo1/time/proxyUserTZ')" class="btn btn-primary">demo1/time/proxyUserTZ</button> Using Authentication: Bearer MP-JWT token...<br/>
         </div>
         <div class="tab-pane fade" id="v-pills-fault" role="tabpanel" aria-labelledby="v-pills-fault-tab">

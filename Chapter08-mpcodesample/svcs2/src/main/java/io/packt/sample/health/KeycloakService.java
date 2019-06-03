@@ -1,4 +1,4 @@
-package health;
+package io.packt.sample.health;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

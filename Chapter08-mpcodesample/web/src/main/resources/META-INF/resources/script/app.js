@@ -13,7 +13,7 @@ function refreshToken(minValidity) {
   console.log("refreshToken, minValidity=%d", minValidity);
     keycloak.updateToken(minValidity).success(function(refreshed) {
         if (refreshed) {
-            output(keycloak.tokenParsed);
+            output("Token refreshed");
         } else {
             output('Token not refreshed, valid for ' + Math.round(keycloak.tokenParsed.exp + keycloak.timeSkew - new Date().getTime() / 1000) + ' seconds');
         }
@@ -122,14 +122,37 @@ function secureRequest(port, path) {
                   iframe.contentWindow.postMessage(oReq.responseText, '*');
                   console.log("did postMessage");
             } else {
-              console.log("Failure, oReq.status="+oReq.status);
+              console.log("onload Failure, oReq.status="+oReq.status);
             }
         } else {
               console.log("oReq.readyState="+oReq.readyState);
         }
     };
-    console.log("Send request, %s", url);
+    oReq.onerror = function (err) {
+      console.log("onerror, err=%o, oReq=%o", err, oReq);
+    };
+    oReq.onloadend = function() {
+        if (oReq.readyState === oReq.DONE) {
+            if (oReq.status === 200) {
+            } else {
+              console.log("onloadend Failure, oReq.status="+oReq.status);
+              alert("Failed to access endpoint");
+              iframe.contentWindow.postMessage("Failed to access endpoint", '*');
+              console.log("did postMessage");
+            }
+        } else {
+              console.log("oReq.readyState="+oReq.readyState);
+              iframe.contentWindow.postMessage("Unknown error", '*');
+              console.log("did postMessage");
+        }
+    }
+
+    console.log("Sending request, %s", url);
     oReq.send();
+}
+
+function secureFetch(port, path) {
+
 }
 
 keycloak.init(initOptions).success(function(authenticated) {

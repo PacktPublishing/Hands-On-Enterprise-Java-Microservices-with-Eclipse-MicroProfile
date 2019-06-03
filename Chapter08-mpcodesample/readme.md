@@ -57,7 +57,7 @@ http://localhost:8080/index.html
 
 ### Svcs2 Shell Command
 Next, in the Svcs2 shell, cd to the svcs2 subdirectory and then run this
-command to build the svcs1 image:
+command to build the svcs2 image:
 
 `mvn clean package`
 

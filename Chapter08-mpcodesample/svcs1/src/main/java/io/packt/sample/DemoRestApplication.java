@@ -32,8 +32,8 @@ import javax.ws.rs.core.Application;
                     url = "http://www.apache.org/licenses/LICENSE-2.0.html")
     ),
     servers = {
-                @Server(url = "http://localhost:8080/", description = "demo1 host"),
-                @Server(url = "http://localhost:8081/", description = "demo2 host")
+                @Server(url = "http://localhost:8081/", description = "svcs1 host"),
+                @Server(url = "http://localhost:8082/", description = "svcs2 host")
         },
     externalDocs = @ExternalDocumentation(url="http://microprofile.io", description = "Eclipse MicroProfile Homepage")
 )

@@ -49,7 +49,7 @@ public class JwtEndpoint {
     public String secureHello() {
         String user = jwt == null ? "anonymous" : jwt.getName();
         String scheme = context.getAuthenticationScheme();
-        boolean isUserInRole = context.isUserInRole("GOTO-attendee");
-        return String.format("Hello[secure] user=%s, upn=%s, scheme=%s, isUserInRole(GOTO-attendee)=%s", user, upn.getValue(), scheme, isUserInRole);
+        boolean isUserInRole = context.isUserInRole("PacktMPUser");
+        return String.format("Hello[secure] user=%s, upn=%s, scheme=%s, isUserInRole(PacktMPUser)=%s", user, upn.getValue(), scheme, isUserInRole);
     }
 }
