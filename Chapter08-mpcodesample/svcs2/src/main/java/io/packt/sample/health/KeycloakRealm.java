@@ -1,4 +1,4 @@
-package health;
+package io.packt.sample.health;
 
 import javax.json.bind.annotation.JsonbProperty;
 
