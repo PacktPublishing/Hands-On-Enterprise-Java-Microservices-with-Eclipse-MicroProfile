@@ -1,4 +1,4 @@
-package io.pckt.jwt.rest;
+package io.pckt.ot.rest;
 
 import io.opentracing.Tracer;
 import javax.inject.Inject;
