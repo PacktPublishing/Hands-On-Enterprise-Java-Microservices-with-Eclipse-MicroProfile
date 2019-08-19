@@ -25,7 +25,7 @@
     </scm>
 
     <properties>
-        <thorntail.version>2.4.0.Final</thorntail.version>
+        <thorntail.version>2.5.0.Final</thorntail.version>
         <junit.version>5.4.1</junit.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>

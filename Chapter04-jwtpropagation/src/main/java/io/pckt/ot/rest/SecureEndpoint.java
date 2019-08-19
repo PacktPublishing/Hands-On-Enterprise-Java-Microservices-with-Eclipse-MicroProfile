@@ -1,4 +1,4 @@
-package io.pckt.jwt.rest;
+package io.pckt.ot.rest;
 
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
