@@ -1,5 +1,7 @@
 package io.packt.restc.services;
 
+import io.packt.restc.contract.Now;
+import io.packt.restc.contract.WorldClockApi;
 import java.net.URI;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -8,8 +10,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import io.pckt.restc.contract.Now;
-import io.pckt.restc.contract.WorldClockApi;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 @Path("/api")

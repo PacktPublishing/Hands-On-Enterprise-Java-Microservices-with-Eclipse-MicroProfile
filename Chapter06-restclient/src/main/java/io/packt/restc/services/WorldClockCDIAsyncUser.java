@@ -1,7 +1,8 @@
 package io.packt.restc.services;
 
+import io.packt.restc.contract.Now;
+import io.packt.restc.contract.WorldClockApiAsync;
 import java.util.concurrent.CompletionStage;
-import java.util.concurrent.ExecutionException;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -11,8 +12,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import io.pckt.restc.contract.Now;
-import io.pckt.restc.contract.WorldClockApiAsync;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 @ApplicationScoped
