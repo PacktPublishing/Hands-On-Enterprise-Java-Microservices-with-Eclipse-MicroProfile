@@ -1,4 +1,4 @@
-package io.pckt.ot.rest;
+package io.packt.ot.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

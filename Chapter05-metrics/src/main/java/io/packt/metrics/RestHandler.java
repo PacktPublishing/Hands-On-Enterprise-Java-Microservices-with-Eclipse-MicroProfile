@@ -1,5 +1,5 @@
 
-package com.packt.microprofile_book.metrics;
+package io.packt.metrics;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

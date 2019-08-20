@@ -70,7 +70,7 @@ $ curl -HAccept:application/json http://localhost:8080/metrics/application
     "fiveMinRate": 0.5429024508215757,
     "fifteenMinRate": 0.5803296602892035
   },
-  "com.packt.microprofile_book.metrics.RestHandler.aGauge" : 42,  #<4>
+  "io.packt.metrics.RestHandler.aGauge" : 42,  #<4>
   "justACounter" : 8   #<5>
 }
 ```

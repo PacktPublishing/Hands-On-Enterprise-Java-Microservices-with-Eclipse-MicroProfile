@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>io.microprofile</groupId>
+    <groupId>io.packt</groupId>
     <artifactId>handson-microprofile</artifactId>
     <relativePath>../pom.xml</relativePath>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>io.microprofile.hc</groupId>
+  <groupId>io.packt.hc</groupId>
   <artifactId>health-check</artifactId>
   <name>Health Check</name>
   <packaging>war</packaging>

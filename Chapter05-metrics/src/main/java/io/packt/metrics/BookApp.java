@@ -1,4 +1,4 @@
-package com.packt.microprofile_book.metrics;
+package io.packt.metrics;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

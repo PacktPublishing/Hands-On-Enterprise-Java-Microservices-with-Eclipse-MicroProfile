@@ -1,4 +1,4 @@
-package io.pckt.restc.contract;
+package io.packt.restc.contract;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

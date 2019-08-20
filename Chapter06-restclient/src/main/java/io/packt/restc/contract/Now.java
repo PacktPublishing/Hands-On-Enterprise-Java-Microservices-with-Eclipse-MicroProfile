@@ -1,4 +1,4 @@
-package io.pckt.restc.contract;
+package io.packt.restc.contract;
 
 /**
  * Data object returned by WorldClockApi and TimeService
