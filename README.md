@@ -49,6 +49,15 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781838643102_ColorImages.pdf).
 
+## Errata
+* Page 78 (Information Box): **MicroProfile Metrics is developing the 2.x version of the specification that has some breaking changes to 1.x.** _should be_ **MicroProfile Metrics is developing the 2.0 version of the specification that has some breaking changes to 1.x.**
+
+* Page 176 (Line 9): **The Reactive Manifesto defines the characteristics of reactive systems to including an asynchronous messaging core that is used to build elastic, resilient systems.** _should be_ **The Reactive Manifesto defines the characteristics of reactive systems to include an asynchronous messaging core, which is used to build elastic, resilient systems.**
+
+* Page 178 (Paragraph 5, line 1): **The MP-RM specification defines a number of supported signature types that beans can use to define publish and subscriber behaviors.** _should be_ **The MP-RM specification defines several supported signature types that beans can use to define publisher and subscriber behaviors.**
+
+* Page 179 (Paragraph 6, line 2): **The publisher method types of methods all have an @Outgoing("channel-name") annotation and support signatures as follows:** _should be_ **All  publisher method types have an @Outgoing("channel-name") annotation and support signatures as follows:**
+
 ### Related products
 * Mastering Microservices with Java - Third Edition  [[Packt]](https://www.packtpub.com/application-development/mastering-microservices-java-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789530728) [[Amazon]](https://www.amazon.com/dp/1785285173)
 
