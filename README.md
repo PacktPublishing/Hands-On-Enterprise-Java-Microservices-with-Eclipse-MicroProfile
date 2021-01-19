@@ -1,6 +1,6 @@
 # Hands-On Enterprise Java Microservices with Eclipse MicroProfile 
 
-<a href="https://www.packtpub.com/web-development/hands-on-enterprise-java-microservices-with-eclipse-microprofile?utm_source=github&utm_medium=repository&utm_campaign=9781838643102"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781838643102-original.jpeg" alt="Hands-On Enterprise Java Microservices with Eclipse MicroProfile " height="256px" align="right"></a>
+<a href="https://www.packtpub.com/web-development/hands-on-enterprise-java-microservices-with-eclipse-microprofile?utm_source=github&utm_medium=repository&utm_campaign=9781838643102"><img src="https://static.packt-cdn.com/products/9781838643102/cover/smaller" alt="Hands-On Enterprise Java Microservices with Eclipse MicroProfile " height="256px" align="right"></a>
 
 This is the code repository for [Hands-On Enterprise Java Microservices with Eclipse MicroProfile](https://www.packtpub.com/web-development/hands-on-enterprise-java-microservices-with-eclipse-microprofile?utm_source=github&utm_medium=repository&utm_campaign=9781838643102), published by Packt.
 
